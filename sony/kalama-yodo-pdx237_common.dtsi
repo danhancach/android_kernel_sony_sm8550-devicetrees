@@ -21,3 +21,39 @@
 #include "somc-charger-yodo-pdx237.dtsi"
 #include "lxs_touchscreen_pdx234.dtsi"
 #include "lxs_touchscreen_pdx237.dtsi"
+
+/*
+ * pdx237 không gắn pmr735d / pm8010 SPMI — chỉ dùng rpmh regulators pm8010m_l*.
+ * Tắt node QRD để tránh probe fail trong logcat.
+ */
+&pmr735d_k {
+	status = "disabled";
+};
+
+&pmr735d_l {
+	status = "disabled";
+};
+
+&pmr735d_k_temp_alarm {
+	status = "disabled";
+};
+
+&pmr735d_l_temp_alarm {
+	status = "disabled";
+};
+
+&pm8010_m {
+	status = "disabled";
+};
+
+&pm8010_n {
+	status = "disabled";
+};
+
+&pm8010m_tz {
+	status = "disabled";
+};
+
+&pm8010n_tz {
+	status = "disabled";
+};
