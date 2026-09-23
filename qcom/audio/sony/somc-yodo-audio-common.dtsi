@@ -61,7 +61,8 @@
 		interrupts = <67 IRQ_TYPE_LEVEL_LOW>;
 		cirrus,boost-ind-nanohenry = <1000>;
 		cirrus,boost-cap-microfarad = <15>;
-		cirrus,boost-ipk-milliamp = <3500>;
+		/* 3500→4200: tang dong boost LRA (max driver 4500) — rung he thong manh hon */
+		cirrus,boost-ipk-milliamp = <4200>;
 		cirrus,hiber-enable;
 		cirrus,fw-id-remap = <0x1400D0>;
 		cirrus,f0-default = <2768896>;
